@@ -1,10 +1,12 @@
 .chart-line {
 	display: flex;
 	width: 100%;
+	line-height: 2;
 	box-sizing: border-box;
 }
 .chart-line-text {
 	width: 20%;
+	min-width: 100px;
 	overflow: hidden;
 	margin-right: 24px;
 	text-align: right;
