@@ -1,0 +1,17 @@
+.chart {
+	padding-inline: 2rem;
+	max-width: 500px;
+	margin-inline: auto;
+}
+
+.chart-container {
+	display: flex;
+	flex-direction: column;
+	padding-top: 1rem;
+	gap: 20px;
+	margin-bottom: 1rem;
+}
+
+.chart-header {
+	text-transform: uppercase;
+}

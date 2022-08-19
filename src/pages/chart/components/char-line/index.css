@@ -1,0 +1,22 @@
+.chart-line {
+	display: flex;
+	width: 100%;
+	box-sizing: border-box;
+}
+.chart-line-text {
+	width: 20%;
+	overflow: hidden;
+	margin-right: 24px;
+}
+.chart-line-empty-line {
+	background-color: gray;
+	flex-grow: 1;
+}
+.chart-line-fill {
+	background-color: lightseagreen;
+	height: 100%;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
