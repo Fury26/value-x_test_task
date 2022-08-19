@@ -3,17 +3,14 @@ import Button from '../../../components/button';
 import ChartLine from '../components/char-line';
 import './index.css';
 
-const DATA = [
-	{ name: 'Landing Page', time: 7.4 },
-	{ name: 'Configurator', time: 0.2 },
-	{ name: 'Check-out', time: 7.0 },
-	{ name: 'Deal', time: 3.8 },
-];
-
 const REFRESH_DELAY = 53000;
 
-const Chart: React.FC = () => {
-	const [data, setData] = useState(DATA);
+type Props = {
+	initData: { name: string; time: number }[];
+};
+
+const Chart: React.FC<Props> = ({ initData }) => {
+	const [data, setData] = useState(initData);
 	const sum = useMemo(() => data.reduce((prev, { time }) => (prev += time), 0), [data]);
 
 	const getPaddings = (idx: number) => {
@@ -41,7 +38,10 @@ const Chart: React.FC = () => {
 
 	return (
 		<div className="chart">
-			<p className="chart-header">Spent Time(seconds)</p>
+			<p className="chart-header">
+				Spent Time(seconds)
+				<Button onClick={refreshData}>Refresh Data</Button>
+			</p>
 
 			<div className="chart-container">
 				{data.map(({ name, time }, idx) => {
@@ -56,7 +56,6 @@ const Chart: React.FC = () => {
 					);
 				})}
 			</div>
-			<Button onClick={refreshData}>Refresh Data</Button>
 		</div>
 	);
 };

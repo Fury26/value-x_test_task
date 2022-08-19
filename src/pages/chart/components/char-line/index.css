@@ -7,12 +7,17 @@
 	width: 20%;
 	overflow: hidden;
 	margin-right: 24px;
+	text-align: right;
 }
 .chart-line-empty-line {
-	background-color: gray;
+	background-color: lightgrey;
 	flex-grow: 1;
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
 }
 .chart-line-fill {
+	line-height: 0;
 	background-color: lightseagreen;
 	height: 100%;
 	box-sizing: border-box;
